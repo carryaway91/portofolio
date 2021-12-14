@@ -89,11 +89,6 @@ export const desc7 = {
 }
 export const desc8 = {
     en: {
-        p1: 'Minesweeper',
-    }
-}
-export const desc8 = {
-    en: {
         p1: 'Minespeewer',
     },
     svk: {
