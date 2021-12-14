@@ -18,16 +18,6 @@ const Portfolio = () => {
 
     return (
         <Container>
-           
-            <PortfolioCard right
-                img={Mines} 
-                title="Minesweeper" 
-                tech="ReactJS, typescript"
-                link="https://minesweeper-6ih30a4lf-carryaway91.vercel.app/"
-                git="https://github.com/carryaway91/minesweeper_react_ts"
-                >
-                    <p>- { lang && desc8[lang].p1 }</p>
-            </PortfolioCard>
             <PortfolioCard 
                 img={Mines} 
                 title="Minesweeper" 
