@@ -1,12 +1,12 @@
 export const menu = {
     en: {
-        portfolio: 'Portfolio',
+        website: 'Websites',
+        design: 'Designs',
         about: 'About me',
-        contact: 'Contact'
     },
     svk: {
-        portfolio: 'Portfólio',
+        website: 'Webstránky',
+        design: 'Dizajny',
         about: "O mne",
-        contact: "Kontakt"
     }
 }

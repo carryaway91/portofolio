@@ -15,6 +15,7 @@ export const GlobalStyle = createGlobalStyle`
     body {
         background: #f3f2f2;
         color: #0A3738;
+        position: relative;
     }
     
     h1,h2,h3,h4,h5,h6 {
@@ -30,14 +31,35 @@ export const GlobalStyle = createGlobalStyle`
     a {
         text-decoration: none;
     }
-`
-
-export const Container = styled.div`
+    `
+    
+    export const Container = styled.div`
     width: 100%;
     min-height: 100vh;
 `
 
 export const Main = styled.div`
     max-width: 1230px;
-    margin: 0 auto
+    margin: 0rem auto
+    
+`
+
+export const Overlay = styled.div`
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: black;
+    opacity: .8;
+    z-index: 200000
+`
+export const UnderNav = styled.div`
+    width: 100%;
+    height: 7.5rem;
+
+
+    @media(max-width: 510px) {
+        height: 9rem
+    }
 `

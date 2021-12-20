@@ -5,17 +5,32 @@ export const Nav = styled.nav`
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    z-index: 3000;
+    background: #f3f2f2;
 
     .main {
         display: flex;
+        @media(max-width: 670px) {
+            flex-direction: column;
+
+            ul {
+                margin: 0;
+                position: relative;
+                left: -2rem
+            }
+        }
         @media(max-width: 430px) {
-            flex-direction: column
+            ul {
+                left: -.4rem
+            }
         }
     }
 
     @media(max-width: 530px) {
         flex-direction: column
     }
+
 
 `
 
@@ -59,5 +74,10 @@ export const LangWrapper = styled.div`
     span {
         position: relative;
         top: -3px
+    }
+
+    @media(max-width: 530px) {
+        position: relative;
+        left: -.4rem
     }
 `

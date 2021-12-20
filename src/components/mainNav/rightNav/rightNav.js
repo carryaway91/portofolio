@@ -9,7 +9,8 @@ const RightNav = () => {
 
     return (
         <Container>
-            <NavItem to="/portfolio">{ lang && menu[lang].portfolio }</NavItem>
+            <NavItem to="/websites">{ lang && menu[lang].website }</NavItem>
+            <NavItem to="/designs">{ lang && menu[lang].design }</NavItem>
             <NavItem to="/about">{ lang && menu[lang].about }</NavItem>
         </Container>
     );

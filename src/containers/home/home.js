@@ -2,7 +2,7 @@ import { useContext, useState, useEffect } from 'react'
 import { LangContext } from '../../context/langContext'
 import { intro } from './languages'
 import { Container, LeftWrapper, MainTitle, Hi, Links, Link, ProfilePic, Additional, RightPanel, PhotoContainer, HomeContainer } from "./homeStyles"
-import Ja from '../../img/ja-upraveny.png'
+import Ja from '../../img/ja-upraveny.jpg'
 import Gmail from '../../img/gmail.png'
 import Ig from '../../img/instagram.png'
 import Fb from '../../img/facebook.png'

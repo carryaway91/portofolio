@@ -1,20 +1,19 @@
 import { useState, useEffect } from 'react'
 import { Switch, Route } from 'react-router-dom';
 import home from './containers/home/home';
-import Portfolio from './containers/portfolio/portfolio';
+import Websites from './containers/websites/websites';
 import MainNav from './components/mainNav/mainNav'
-import { GlobalStyle, Container, Main } from './appStyles'
+import { GlobalStyle, UnderNav, Container, Main, Overlay } from './appStyles'
 import { LangContext } from './context/langContext'
+import { PhotoContext } from './context/photoContext'
 import About from './containers/about/about';
+import Designs from './containers/designs/designs'
+
 
 function App() {
   const [lang, setLang] = useState('en')
-  
-  const handleLanguage = lang => {
-    setLang(lang)
-    localStorage.setItem('lang', JSON.stringify(lang))
-  }
-  
+  const [photoActive, setPhotoActive] = useState(false)
+
   useEffect(() => {
     let language = JSON.parse(localStorage.getItem('lang'))
     
@@ -26,6 +25,13 @@ function App() {
     setLang(language)
   }, [])
 
+
+
+  const handleLanguage = lang => {
+    setLang(lang)
+    localStorage.setItem('lang', JSON.stringify(lang))
+  }
+  
   return (
     <Container>
       <GlobalStyle />
@@ -34,15 +40,25 @@ function App() {
         changeLang: handleLanguage
         }}>
         <MainNav />
-        <Main>
-
-          <Switch>
-            <Route path='/portfolio' component={Portfolio} />
-            <Route path='/about' component={About} />
-            <Route path='/' exact component={home} />
-          </Switch>
+        <UnderNav />
+         <Main>
+          <PhotoContext.Provider value={{
+            activatePhoto: () => setPhotoActive(true),
+            deactivatePhoto: () => setPhotoActive(false),
+            active: photoActive
+          }}>
+            <Switch>
+              <Route path='/websites' component={Websites} />
+              <Route path='/designs' component={Designs} />
+              <Route path='/about' component={About} />
+              <Route path='/' exact component={home} />
+            </Switch>
+          </PhotoContext.Provider>
         </Main>
       </LangContext.Provider>
+      {
+        photoActive && <Overlay onClick={() => setPhotoActive(false)} />
+      }
     </Container>
   );
 }

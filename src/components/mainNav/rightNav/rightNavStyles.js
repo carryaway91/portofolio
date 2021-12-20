@@ -7,4 +7,10 @@ export const Container = styled.ul`
     @media(max-width: 430px) {
         margin: 0
     }
+    a {
+
+        @media(max-width: 350px) {
+            font-size: .8rem;
+        }
+    }
 `

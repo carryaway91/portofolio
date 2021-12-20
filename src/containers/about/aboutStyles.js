@@ -10,7 +10,7 @@ const aboutMeAnimation = keyframes`
     100% { opacity: 1}
 `
 export const Container = styled.div`
-
+margin-top: 2rem;
 .inner {
     display: flex;
     
