@@ -24,7 +24,9 @@ export const Img = styled.img`
     margin: 1rem;
     border: 2px solid #cb9b87;
     animation: ${imgAnimation} 1s;
-
+    object-fit: contain;
+    background: black; 
+    
     &:hover {
         cursor: pointer;
         
