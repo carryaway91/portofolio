@@ -1,11 +1,13 @@
 import { useState, useContext, useEffect } from 'react'
 import { PhotoContext } from '../../context/photoContext'
+import Pokemon from '../../desingImgs/pokemon.png'
 import Shelter from '../../desingImgs/shelter.jpg'
 import Plants from '../../desingImgs/Plants.jpg'
+import Antique from '../../desingImgs/Antique.png'
 import { Img, Container, SelectedWrap, Selected, Close } from './desingsStyles'
 
 const Designs = () => {
-    const [photos, setPhotos] = useState([Plants, Shelter])
+    const [photos, setPhotos] = useState([Antique, Plants, Pokemon, Shelter])
     const [selectedPhoto, setSelectedPhoto] = useState()
     const [showImage, setShowImage] = useState(false)
 

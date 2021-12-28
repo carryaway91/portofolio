@@ -20,7 +20,7 @@ export const Container = styled.div`
 
 
 export const Img = styled.img`
-    width: 46%;
+    width: 25%;
     margin: 1rem;
     border: 2px solid #cb9b87;
     animation: ${imgAnimation} 1s;
@@ -31,6 +31,9 @@ export const Img = styled.img`
     }
 
     @media(max-width: 960px) {
+        width: 40%
+    }
+    @media(max-width: 500px) {
         width: 80%
     }
 `   
