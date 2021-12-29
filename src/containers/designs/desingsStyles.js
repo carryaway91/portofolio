@@ -93,3 +93,50 @@ export const Close = styled.div`
         display: none
     }
 `
+
+export const Next = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    right: 1%;
+    font-size: 1.5rem;
+    color: #605e5e;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid #605e5e;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    p {
+        position: relative;
+        bottom: 4px;
+        left: 1px;
+    }
+`
+
+
+export const Prev = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 1%;
+    font-size: 1.5rem;
+    color: #605e5e;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid #605e5e;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+
+    p {
+        position: relative;
+        bottom: 4px;
+        right: 1px;
+    }
+    
+`
